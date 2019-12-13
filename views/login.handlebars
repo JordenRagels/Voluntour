@@ -1,0 +1,65 @@
+<div id="createAcct" class="container">
+  <form action="/api/user/login" method="POST">
+    <div class="form-row">
+      <div class="col mb-3">
+        <label for="validationServerUsername">
+          Username
+        </label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend3">
+              @
+            </span>
+          </div>
+		  <input
+            type="text"
+            class="form-control"
+            id="validationServerUsername"
+            placeholder="Username"
+            aria-describedby="inputGroupPrepend3"
+            required
+          />
+		  {{#if error}}
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationServerUsername"
+            placeholder="Username"
+            aria-describedby="inputGroupPrepend3"
+            required
+          />
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+			{{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col mb-3">
+        <label for="validationServer05">
+          Password
+        </label>
+        <input type="text" class="form-control" id="validationServer05" placeholder="password" required />
+		{{#if error}}
+		 <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="password" required />
+        <div class="invalid-feedback">
+          Please provide a valid password.
+        </div>
+		{{/if}}
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">
+      Submit form
+    </button>
+    <button type="button" class="btn btn-primary">
+      Cancel
+    </button>
+    <span class="psw">
+      Forgot
+      <a href="#">
+        password?
+      </a>
+    </span>
+  </form>
+</div>

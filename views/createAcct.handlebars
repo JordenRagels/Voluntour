@@ -1,0 +1,88 @@
+<div id="createAcct" class="container">
+  <form action="/user/register" method="POST">
+    <div class="form-row">
+      <div class="col">
+        <label for="validationServer01">
+          First name
+        </label>
+        <input
+          name="firstName"
+          type="text"
+          class="form-control is-valid"
+          id="validationServer01"
+          placeholder="First name"
+          value=""
+          required
+        />
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col mb-3">
+        <label for="validationServer02">
+          Last name
+        </label>
+        <input
+         name="lastName"
+          type="text"
+          class="form-control is-valid"
+          id="validationServer02"
+          placeholder="Last name"
+          value=""
+          required
+        />
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col mb-3">
+        <label for="validationServerUsername">
+          Username
+        </label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend3">
+              @
+            </span>
+          </div>
+          <input
+           name="username"
+            type="text"
+            class="form-control is-invalid"
+            id="validationServerUsername"
+            placeholder="Username"
+            aria-describedby="inputGroupPrepend3"
+            required
+          />
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col mb-3">
+        <label for="validationServer05">
+          Password
+        </label>
+        <input  name="password" type="text" class="form-control is-invalid" id="validationServer05" placeholder="password" required />
+        <div class="invalid-feedback">
+          Please provide a valid password.
+        </div>
+      </div>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="defaultUnchecked" />
+      <label class="custom-control-label" for="defaultUnchecked">
+        Admin?
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">
+      Submit form
+    </button>
+  </form>
+</div>
