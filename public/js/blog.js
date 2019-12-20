@@ -65,21 +65,26 @@ $(document).ready(function() {
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-default");
 
-        var newPostTitle = $("<h2 id=title>");
+        var newPostTitle = $("<h2 id=description>");
         var newPostClockIn = $("<small id=clockIn>");
         var newPostDate = $("<small id=clockOut>");
         var newPostCategory = $("<h5 id=organization>");
 
         newPostCategory.text(post.category);
         newPostCategory.css({
-            float: "right",
-            "font-weight": "700",
-            "margin-top": "-15px"
+            "margin-top": "50px"
         });
         var newPostCardBody = $("<div>");
         newPostCardBody.addClass("card-body");
         newPostTitle.text(post.title + " ");
+        newPostTitle.css({
+            "margin-top": "50px",
+        });
         newPostClockIn.text(post.clockIn);
+        newPostClockIn.css({
+            "margin":"1px"
+
+        });
         var formattedDate = new Date(post.createdAt);
         //formattedDate = moment(formattedDate);
         newPostClockIn = new Date(post.clockIn)
@@ -96,10 +101,9 @@ $(document).ready(function() {
         var times = [
             timeDiff + newPostTimeDiff
         ];
-        newPostCardHeading.prepend(times);
-        newPostCardHeading.append(newPostClockIn);
         newPostCardHeading.append(deleteBtn);
-        newPostCardHeading.append(editBtn);
+        newPostCardHeading.append(times);
+        newPostCardHeading.append(newPostClockIn);
         newPostCardHeading.append(newPostTitle);
         newPostCardHeading.append(newPostCategory);
         newPostTitle.append(newPostDate);
